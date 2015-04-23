@@ -142,7 +142,7 @@ install(TARGETS rr rrpreload
 # directory, so we can set different compile options on them.
 # This sucks but I can't find a better way to get CMake to build
 # the same source file in two different ways.
-if(rr_64BIT)
+if(false)
   foreach(file preload_interface.h traced_syscall_shared.S)
     set_source_files_properties(32/${file}
                                 PROPERTIES GENERATED true HEADER_FILE_ONLY true)
@@ -467,7 +467,7 @@ endforeach(test)
 # directory, so we can set different compile options on them.
 # This sucks but I can't find a better way to get CMake to build
 # the same source file in two different ways.
-if(rr_64BIT)
+if(false)
   set_source_files_properties(32/rrutil.h
                               PROPERTIES GENERATED true HEADER_FILE_ONLY true)
   add_custom_command(OUTPUT 32/rrutil.h
